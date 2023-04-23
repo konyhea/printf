@@ -33,3 +33,5 @@ Task 12:  Every time that I wanted to give up, if I saw an interesting textile, 
 Task 13:  Print is the sharpest and the strongest weapon of our party
  
 Task 14: The flood of print has turned reading into a process of gulping rather than savoring 
+
+Co-partner on printf: [Osunkwo Ebubechukwu Michael Rexvito](https://github.com/Rexvito)
