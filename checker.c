@@ -35,7 +35,7 @@ int *buffer_index)
 			if (fun_list[j].sign == NULL)
 			{
 				buffer[*buffer_index] = format[i];
-				*buffer_index += 1
+				*buffer_index += 1;
 					if (*buffer_index == BUFFER_SIZE)
 					{
 						write(1, buffer, BUFFER_SIZE);
