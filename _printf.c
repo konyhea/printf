@@ -32,7 +32,8 @@ int _printf(const char *format, ...)
 		if (format == NULL)
 			return (-1);
 		va_start(args, format);
-		count = checker(format, fun_list, args, buffer, &buffer_index);
+		count = checker(format, fun_list, args, buffer,
+		&buffer_index);
 		va_end(args);
 		if (buffer_index > 0)
 			write(1, buffer, buffer_index);
