@@ -35,7 +35,7 @@ typedef struct specifier spec;
 
 int _printf(const char *format, ...);
 
-int chkr(const char *format, spec fun_list[], va_list args, char *buffer,
+int checker(const char *format, spec fun_list[], va_list args, char *buffer,
 int *buffer_index);
 
 /* helper function */
