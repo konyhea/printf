@@ -10,8 +10,9 @@
  * Return: A total count of printer character
  */
 
-#include "main.h"
-int checker(const char *format, spec fun_list[], va_list args, char *buffer, int *buffer_index)
+int checker(const char *format, spec fun_list[], va_list args, char *buffer,
+int *buffer_index)
+
 {
 	int i, j, ret_val;
 	int count = 0;
@@ -24,7 +25,7 @@ int checker(const char *format, spec fun_list[], va_list args, char *buffer, int
 			{
 				if (format[i + 1] == fun_list[j].sign[0])
 				{
-					ret_val = fun_list[j].f(args, buffer, buffer_index);
+				ret_val = fun_list[j].f(args, buffer, buffer_index);
 					if (ret_val == -1)
 						return (-1);
 					count += ret_val;
@@ -43,7 +44,7 @@ int checker(const char *format, spec fun_list[], va_list args, char *buffer, int
 				count++;
 			}
 			else
-				i++;
+			i++;
 		}
 		else
 		{
