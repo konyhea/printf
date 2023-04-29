@@ -5,16 +5,16 @@
  * @format: contain all the possible parameters
  * @fun_list: function that can trigger this parameters
  * @args: list of arguments passed to the program
- *
+ * @buffer: A place to store the formatted output
+ * @buffer_index: A place to store the formatted output too
  * Return: A total count of printer character
  */
 
-int checker(const char *format, spec fun_list[], va_list args)
+#include "main.h"
+int checker(const char *format, spec fun_list[], va_list args, char *buffer, int *buffer_index)
 {
 	int i, j, ret_val;
-	int count;
-
-	count = 0;
+	int count = 0;
 
 	for (i = 0; format[i] != '\0'; i++)
 	{
@@ -24,32 +24,36 @@ int checker(const char *format, spec fun_list[], va_list args)
 			{
 				if (format[i + 1] == fun_list[j].sign[0])
 				{
-					ret_val = fun_list[j].f(args);
+					ret_val = fun_list[j].f(args, buffer, buffer_index);
 					if (ret_val == -1)
-					return (-1);
+						return (-1);
 					count += ret_val;
 					break;
 				}
 			}
-		
-	if (fun_list[j].sign == NULL && format[i + 1] != ' ')
-		{
-			if (format [i + 1] != '\0')
+			if (fun_list[j].sign == NULL)
 			{
-				print_char(format[i]);
-				print_char(format[i + 1]);
-
-				count = count + 2;
+				buffer[*buffer_index] = format[i];
+				*buffer_index += 1
+					if (*buffer_index == BUFFER_SIZE)
+					{
+						write(1, buffer, BUFFER_SIZE);
+						*buffer_index = 0;
+					}
+				count++;
 			}
 			else
-			return (-1);
+				i++;
 		}
-		i = i + 1;
-		}
-
 		else
 		{
-			print_char(format[i]);
+			buffer[*buffer_index] = format[i];
+			*buffer_index += 1;
+			if (*buffer_index == BUFFER_SIZE)
+			{
+				write(1, buffer, BUFFER_SIZE);
+				*buffer_index = 0;
+			}
 			count++;
 		}
 	}
