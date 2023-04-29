@@ -11,11 +11,11 @@ int _printf(const char *format, ...)
 {
 	int count;
 
-	int count;
 	spec fun_list[] = {
 		{"c", print_chara},
 		{"s", print_string},
 		{"%", print_percent},
+		/*
 		{"d", print_int},
 		{"i", print_int},
 		{"b", print_binary},
@@ -24,6 +24,8 @@ int _printf(const char *format, ...)
 		{"x", print_hex},
 		{"X", print_heX},
 		{"S", print_S},
+
+		*/
 		{NULL, NULL}
 	};
 	va_list args;
