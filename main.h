@@ -51,13 +51,18 @@ int *buffer_index);
 
 int print_string(va_list list, char *buffer, int *buffer_index);
 
+int print_int(va_list list, char *buffer, int *buffer_index);
+
+int print_binary(va_list list, char *buffer, int *buffer_index);
+
+int print_unsigned(va_list list, char *buffer, int *buffer_index);
+
+int print_octal(va_list list, char *buffer, int *buffer_index);
+
+int print_hex(va_list list, char *buffer, int *buffer_index);
+
+int print_heX(va_list list, char *buffer, int *buffer_index);
 /*
-* int print_int(va_list list, char *buffer, int *buffer_index);
-* int print_binary(va_list list, char *buffer, int *buffer_index);
-* int print_unsigned(va_list list, char *buffer, int *buffer_index);
-* int print_octal(va_list list, char *buffer, int *buffer_index);
-* int print_hex(va_list list, char *buffer, int *buffer_index);
-* int print_heX(va_list list, char *buffer, int *buffer_index);
 * int print_S(va_list list, char *buffer, int *buffer_index);
 *
 */
