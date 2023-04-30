@@ -21,7 +21,7 @@ int print_binary(va_list list, char *buffer, int *buffer_index)
 	if (num == 0)
 	{
 		buffer[(*buffer_index)++] = '0';
-		return (1)
+		return (1);
 	}
 
 	for (i = 0; num > 0; i++)
