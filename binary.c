@@ -17,7 +17,7 @@ int print_binary(va_list list, char *buffer, int *buffer_index)
 	char binary[32];
 
 	num = va_arg(list, unsigned int);
-	
+
 	if (num == 0)
 	{
 		buffer[(*buffer_index)++] = '0';
@@ -36,11 +36,11 @@ int print_binary(va_list list, char *buffer, int *buffer_index)
 		count++;
 
 		if (*buffer_index == BUFFER_SIZE)
-			{
-				write(1, buffer, BUFFER_SIZE);
-				*buffer_index = 0;
-			}
+		{
+			write(1, buffer, BUFFER_SIZE);
+			*buffer_index = 0;
+		}
 	}
-	
-	return (count);	
+
+	return (count);
 }
