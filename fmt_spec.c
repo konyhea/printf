@@ -13,7 +13,7 @@ int print_chara(va_list list, char *buffer, int *buffer_index)
 	char c;
 
 	c = va_arg(list, int);
-	buffer[*(buffer_index)++] = c;
+	buffer[(*buffer_index)++] = c;
 	if (*buffer_index == BUFFER_SIZE)
 	{
 		write(1, buffer, BUFFER_SIZE);
