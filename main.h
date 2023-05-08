@@ -46,7 +46,7 @@ int print_number(unsigned int n);
 
 int print_chara(va_list list, char *buffer, int *buffer_index);
 
-int print_percent(va_list list __attribute__((unused)), char *buffer,
+int print_percent(va_list list, char *buffer,
 int *buffer_index);
 
 int print_string(va_list list, char *buffer, int *buffer_index);
