@@ -1,10 +1,12 @@
 #include "main.h"
 #include <stdarg.h>
 
-/** print_octal - function that prints numeral system with a base of 8
+/**
+ * print_octal - function that prints numeral system with a base of 8
  * @list: list of arguments
  * @buffer: Array to handle print
  * @buffer_index: Place to store the numbers
+ *
  * Return: Number of character printed
  */
 int print_octal(va_list list, char *buffer, int *buffer_index)
@@ -13,6 +15,7 @@ int print_octal(va_list list, char *buffer, int *buffer_index)
 	int i;
 	int count = 0;
 	char octal[11];
+
 	num = va_arg(list, unsigned int);
 	if (num == 0)
 	{
@@ -37,10 +40,12 @@ int print_octal(va_list list, char *buffer, int *buffer_index)
 	return (count);
 }
 
-/** print_hex - function that prints lower hexdecimal
+/**
+ * print_hex - function that prints lower hexdecimal
  * @list: list of arguments
  * @buffer: Array to handle print
  * @buffer_index: Place to store the numbers
+ *
  * Return: Number of character printed
  */
 int print_hex(va_list list, char *buffer, int *buffer_index)
@@ -49,6 +54,7 @@ int print_hex(va_list list, char *buffer, int *buffer_index)
 	int i;
 	int count = 0;
 	char hex[8];
+
 	num = va_arg(list, unsigned int);
 	if (num == 0)
 	{
@@ -77,10 +83,11 @@ int print_hex(va_list list, char *buffer, int *buffer_index)
 }
 
 /**
- * print_hex - function that prints upper hexdecimal
+ * print_heX - function that prints upper hexdecimal
  * @list: list of arguments
  * @buffer: Array to handle print
  * @buffer_index: Place to store the numbers
+ *
  * Return: Number of character printed
  */
 int print_heX(va_list list, char *buffer, int *buffer_index)
@@ -89,6 +96,7 @@ int print_heX(va_list list, char *buffer, int *buffer_index)
 	int i;
 	int count = 0;
 	char hex[8];
+
 	num = va_arg(list, unsigned int);
 	if (num == 0)
 	{
